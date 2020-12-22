@@ -1,0 +1,30 @@
+*, body {
+    text-align: center;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font: 'Fira Sans', 'Lato';
+}
+
+.lists {
+    display: flex;
+    justify-content: space-around;
+}
+
+.listTitle {
+    background-color: powderblue;
+    padding: 5% 5% 0% 5%;
+    font: red;
+    font-weight: 600;
+}
+
+ul {
+    display: inline-block;
+}
+
+li {
+    text-align: left;
+    background-color: salmon;
+    font: 'Fira sans', 'sans-serif';
+    font-family: 'Fira sans', 'Lato';
+}

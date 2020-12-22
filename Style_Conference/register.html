@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="assets/css/standard.css" />
+    <link rel="stylesheet" href="assets/css/standard.css" />
     <title>Document</title>
   </head>
   <body>
@@ -12,13 +12,13 @@
 
       <h3 class="tagline">August 24 - 26 Omaha, NE</h3>
 
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="speakers.html">Speakers</a>
-        <a href="schedule.html">Schedule</a>
-        <a href="venue.html">Venue</a>
-        <a href="register.html">Register</a>
-      </nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="speakers.html">Speakers</a></li>
+        <li><a href="schedule.html">Schedule</a></li>
+        <li><a href="venue.html">Venue</a></li>
+        <li><a href="register.html">Register</a></li>
+      </ul>
     </header>
     <section> class="row-alt
       <div class="lead container">
@@ -41,17 +41,46 @@
           duis. Eget aliquet nibh praesent tristique magna sit amet purus.</p>
       </div>
     </section>
+    <!-- Main Conent -->
+    <section class="row">
+      <div class="grid">
+
+        <!-- Details -->
+
+        <section class="col-2-3">
+          <h3>Purchase a Conference Pass</h3>
+          <h5>$99 per week</h5>
+
+
+          <fieldset class="register group">
+            <label>
+              Name
+              <input type="text" name="name" placeholder="full name" required>
+            </label>
+
+            <label>
+                E-mail
+                <input type="text" name="email" placeholder="full name" required>
+              </label>
+
+          </fieldset>
+
+        </section>
+
+      </div>
+
+    </section>
 
     <footer class="primary-footer container group">
       <small>&copy; Developer Style Conference</small>
 
-      <nav class="nav">
-        <a href="index.html">Home</a>
-        <a href="speakers.html">Speakers</a>
-        <a href="schedule.html">Schedule</a>
-        <a href="venue.html">Venue</a>
-        <a href="register.html">Register</a>
-      </nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="speakers.html">Speakers</a></li>
+        <li><a href="schedule.html">Schedule</a></li>
+        <li><a href="venue.html">Venue</a></li>
+        <li><a href="register.html">Register</a></li>
+      </ul>
     </footer>
   </body>
 </html>

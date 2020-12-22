@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    font-size: 3vh;
+    font-family: "Open Sans";
+}
+
+section {
+    width: 100vh;
+    height: 100vh;
+}
+
+#home {
+    background-image: url("../images/Cats-and-Dogs.jpg");
+    display: flex;
+    position: bottom;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position-y: 0%;
+}
+
+.title {
+    font-family: "Gloria Hallelujah";
+    font-size: 3rem;
+    text-align: center;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+nav {
+    background-color: #808080;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+a {
+    color: red;
+}
