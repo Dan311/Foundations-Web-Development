@@ -12,10 +12,13 @@ header {
     left: 0;
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
 }
 
-header > span {
+#fancy {
+    position: absolute;
+    top: 0;
+    left: 0;
     margin-left: 3vw;
     font-size: 2em;
     color: white;
@@ -96,11 +99,6 @@ main a:hover {
     padding-left: 3em;
     padding-right: 3em;
     position: relative;
-    border-right: 1px solid #404040;
-}
-
-.teaser > div:last-child {
-    border-right: 0;
 }
 
 .teaser > div::after {
