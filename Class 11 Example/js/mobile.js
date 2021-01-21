@@ -1,3 +1,6 @@
 $(document).ready(function() {
-    $("#menu")
+    $("#menu").click(function() {
+        $("#menu").toggleClass('.open');
+    })
 })
+

@@ -6,6 +6,10 @@
     color: white;
 }
 
+#menu {
+    display: none;
+}
+
 header {
     position: fixed;
     top: 0;
@@ -64,11 +68,11 @@ main {
 main a {
     font-size: 1rem;
     text-transform: uppercase;
-    padding-bottom: 0.5em;
     padding-top: 0.5em;
+    padding-bottom: 0.5em;
     width: 20ch;
     border: 3px solid transparent;
-    border-image: linear-gradient(90deg blue, lightblue, turquoise);
+    border-image: linear-gradient(90deg, blue, lightblue, turquoise);
     border-image-slice: 30%;
     display: inline-block;
     color: inherit;
@@ -78,10 +82,10 @@ main a {
 
 main a:hover {
     border-width: 0;
-    padding-top: calc(0.5em + 3px);
-    padding-bottom: calc(0.5em + 3px);
+    padding-top: calc(.5em + 3px);
+    padding-bottom: calc(.5em + 3px);
     width: calc(20ch + 5px);
-    background: linear-gradient(90deg blue, lightblue, turquoise);
+    background: linear-gradient(90deg, blue, lightblue, turquoise);
 }
 
 .teaser {
