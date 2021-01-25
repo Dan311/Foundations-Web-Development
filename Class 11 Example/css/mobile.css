@@ -51,7 +51,7 @@ main a {
 }
 
 .teaser > div {
-    /* flex-direction: column;
+    flex-direction: column;
     position: relative;
-    border-right: 1px solid #404040; */
+    border-right: 1px solid #404040;
 }

@@ -2,44 +2,56 @@ let taskInput = document.getElementById("new-task"); //Add a new task.
 
 $(function () {
     function addTask() {
+		//check what task list user selected
+		const selectedListName = $("#task").val();
+		console.log("Task is:", selectedListName)
+
+		//use task to create task list name ID
+		const targetListId = selectedListName + "List"
+		console.log(targetListId)
+
+		//use task to create task list name
+		const targetList = $(`#${selectedListName}List`)
+		console.log(targetList)
+
+		//grab text from text box
+		const inputValue = $("#newTask").val()
+		console.log(inputValue)
+
+		//create html structure for lists
+		const listItem = $("<li class='added'></li>").text(inputValue)
+		const checkBox = $(`<input type="checkbox"></input>`)
+		listItem.append(checkBox) 
+
+		console.log(listItem)
+
+		targetList.append(listItem)	
+	}
 
 	$("#addButton").click(function () {
 		//check text box for text, if empty alert user to enter task
-		if (!$("#addButton").val()) {
+		if (!$("#newTask").val()) {
+			console.log("No New Task Value found")
 			const addButtonValue = $("#addButton").val()
 			alert("Please enter a Task!")
-		} else {
-			//check what task list user selected
-			const selectedListName = $("#task").val();
-			console.log("Task is:", selectedListName)
-		
-			//use task to create task list name ID
-			const targetListId = selectedListName + "List"
-			console.log(targetListId)
 
-			//use task to create task list name
-			const targetList = $(`#${selectedListName}List`)
-			console.log(targetList)
-		
-			//grab text from text box
-			const inputValue = $("#newTask").val()
-			console.log(inputValue)
-			
-			//create html structure for lists
-			const listItem = $("<li></li>").text(inputValue)
-			const checkBox = $(`<input type="checkbox"></input>`)
-			listItem.append(checkBox) 
-			  
-			console.log(listItem)
-		
-			targetList.append(listItem)
-		  }
-		
-		  $('#addButton').click(addTask)
-		)
+		} else {
+			console.log("New Task Value found")
+			addTask() 
 		}
-	})
 	
+
+	})
+
+		$("#clearButton").click(function(){
+			$('#homeList').find('*').not('h1').remove()
+			$('#workList').find('*').not('h1').remove()
+	})
+
+	$('body').on("click", ".added", function(){
+        $(this).remove();
+    });
+
 });
 
 
@@ -67,25 +79,3 @@ $(function () {
 // 5. Append it as a child to the ul
 // //
 
-// $(function() {
-//     let colorPicker;
-
-//     function selectCell(cell) {
-//       cell.addClass('selected')
-//     }
-
-//     function deselectCell(cell) {
-//       cell.removeClass('selected')
-//     }
-
-//     function toggleSelectedCell(cell) {
-//       cell.hasClass('selected')
-//         ? deselectCell(cell)
-//         : selectCell(cell)
-//     }
-
-//     function buildCell(suit, rank) {
-//       const cell = $('<td></td>').html(`${rank.character} <span class="icon">${suit.icon}</span>`)
-//       cell.on('click', () => toggleSelectedCell(cell))
-//       return cell
-//     }

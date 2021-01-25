@@ -4,3 +4,8 @@
     background-image: cover;
     font-size: 3rem;
 }
+
+section {
+    width: 100%;
+    height: 100vh;
+}
