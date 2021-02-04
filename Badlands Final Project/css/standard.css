@@ -23,7 +23,7 @@ body {
         "header header header"
         "nav content side"
         "footer footer footer";
-    grid-template-columns: 200px 1fr 200px;
+    grid-template-columns: 210px 1fr 210px;
     grid-template-rows: auto 1fr auto;
     width: 100%;
     height: 100vh;
@@ -107,23 +107,42 @@ main > p {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    justify-content: space-evenly;
     width: 95%;
-    height: 95%;
+    height: 100%;
     padding: 0;
     margin: 1px solid red;
 }
 
 .thing {
-    background-color: rgba(211,211,211, 0.7);
+    background-color: rgba(211,211,211, 0.5);
     width: 175px;
     height: 175px;
-    border: 1px solid red;
+    /* border: 1px solid black; */
     margin: 2em;
     padding: 0;
 }
 
+.thing:nth-child(-n+5) {
+    border: 1px solid red;
+    margin-bottom: 0;
+
+}
+
+.thing:nth-child(n+5) {
+    border: 1px solid green;
+    margin-top: 0;
+    
+    
+}
+
 .thing > p {
     font-size: .6em;
+}
+
+.thing:hover {
+    background-color: rgba(211,211,211, 1.0);
+    text-shadow: 0.5px 0.5px black;
 }
 
 img {
