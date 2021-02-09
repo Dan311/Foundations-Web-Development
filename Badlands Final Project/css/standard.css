@@ -1,4 +1,4 @@
-html, body {
+html, body, p {
     margin: 0;
 }
 
@@ -26,7 +26,7 @@ body {
     grid-template-columns: 210px 1fr 210px;
     grid-template-rows: auto 1fr auto;
     width: 100%;
-    height: 100vh;
+    /* height: 100vh; */
     border: 1px solid red;
 }
 
@@ -52,14 +52,12 @@ span {
     text-decoration: uppercase;
     color: darkblue;
     text-shadow: 2px 2px #F5EB4B;
-    font-size: 1.3em;
-    
+    font-size: 1.3em;  
 }
 
 hr {
     width: 30%;
     color: black;
-
 }
 
 nav {
@@ -92,10 +90,14 @@ a:hover {
 }
 
 main {
+    display: flex;
     grid-area: content;
     border: 1px solid red;
     color: red;
     text-align: center;
+    justify-content:center;align-items:center;
+    flex-direction: column;
+
 }
 
 main > p {
@@ -104,10 +106,11 @@ main > p {
 }
 
 .grid {
+    align-content: flex-start;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
     width: 95%;
     height: 100%;
     padding: 0;
@@ -115,25 +118,13 @@ main > p {
 }
 
 .thing {
+    align-content: flex-start;
     background-color: rgba(211,211,211, 0.5);
     width: 175px;
     height: 175px;
-    /* border: 1px solid black; */
-    margin: 2em;
-    padding: 0;
-}
-
-.thing:nth-child(-n+5) {
-    border: 1px solid red;
-    margin-bottom: 0;
-
-}
-
-.thing:nth-child(n+5) {
-    border: 1px solid green;
-    margin-top: 0;
-    
-    
+    border: 1px solid black;
+    padding-left: 1em;
+    padding-right: 1em;
 }
 
 .thing > p {
@@ -167,12 +158,52 @@ h2, h4 {
     padding: 0;
 }
 
-h4 {
+aside > h4 {
     color: forestgreen;
+    text-shadow: none;
 }
 
 footer {
     grid-area: footer;
     border: 1px solid red;
     background-color: burlywood;
+}
+
+.header2 {
+    padding: 15px;
+    font-size: 1em;
+    text-align: center;
+    background: white;
+}
+
+.leftcolumn > p, .rightcolumn > p {
+    font-size: 1em;
+    font-family: Arial;
+    font-weight: 300;
+    color: black;
+    text-shadow: 1px 1px white;
+
+}
+
+.leftcolumn {
+    float: left;
+    width: 75%;
+}
+
+.rightcolumn {
+    float: left;
+    width: 25%;
+    padding-left: 10px;
+}
+
+.blogimg {
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+}
+
+.card {
+    background-color: white;
+    padding: 10px;
+    margin-top: 10px;
 }
