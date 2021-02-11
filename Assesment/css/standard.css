@@ -1,0 +1,73 @@
+html {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3vh;
+}
+
+body {
+    margin: 0;
+    background: url(../images/playful-kitten-6683.jpg) no-repeat center center fixed;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100vh;
+}
+
+#header {
+    position: fixed;
+    top: 5px;
+    left: 15px;
+    font-size: 3.25em;
+}
+
+.orange {
+    color: orange;
+    text-shadow: 4px 4px black;
+}
+
+.netflix {
+    position: fixed;
+    top: 20%;
+    padding-top: .68em;
+    padding-left: 2vw;
+    font-size: 1.3em;
+}
+
+.netflix > img {
+    position: fixed;
+    top: 20%;
+    vertical-align: middle;
+    height: 3em;
+}
+
+nav {
+    position:fixed;
+    justify-content: space-around;
+    font-size: 1.5em;
+    position: fixed;
+    bottom: 1em;
+    right: 0.6em;
+    text-shadow: 2px 2px black;
+}
+
+a {
+    font-size: 1.25em;
+    margin: .25em;
+    color: orange;
+    text-decoration: none;
+    padding-bottom: .25em;
+}
+
+a > .paw {
+    display: none;
+}
+
+a:hover {
+    display: inline;
+    padding-bottom: 1.25em;
+}
+
+.paw:hover {
+    display:block;
+}
