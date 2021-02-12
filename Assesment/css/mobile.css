@@ -1,0 +1,65 @@
+body {
+    margin: 0;
+    background: url(../images/kitten-v.jpg) no-repeat center center fixed;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100vh;
+    font-size: 0.4em;
+}
+
+/* .image2 {
+    margin: 0;
+    background: url(../images/kitten-flying-v.jpg) no-repeat center center fixed;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100vh;
+    font-size: 0.4em;
+} */
+
+.netflix {
+    position: fixed;
+    top: 15%;
+    padding-top: .68em;
+    padding-left: 2vw;
+    font-size: 1.3em;
+}
+
+.netflix img {
+    position: fixed;
+    top: calc(15% + .6em);
+    vertical-align: middle;
+    height: 1.5em;
+    transition: 1s;
+    padding-left: .3em;
+}
+
+.netflix img:hover {
+    transform: rotateY(360deg);
+    height: 1.2em;
+}
+
+nav {
+    position:fixed;
+    justify-content: space-around;
+    font-size: 0.8em;
+    position: fixed;
+    bottom: 0.5em;
+    right: 0.6em;
+    text-shadow: 1px 1px black;
+}
+
+a {
+    display: inline-block;
+    font-size: .75em;
+    margin: .5em;
+    color: orange;
+    text-decoration: none;
+    padding-bottom: .25em;
+    transition: transform .5s ease-out;
+}

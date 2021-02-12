@@ -5,7 +5,7 @@ html, body {
     color: white;
 }
 
-.home {
+#home {
     background-image: url('../images/background.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -25,9 +25,58 @@ header {
     height: 10vh;
 }
 
-header #logo (
+header #logo {
     height: 13vh;
-)
+}
+
+#subheader {
+    position: fixed;
+    top: 10vh;
+    left: 0;
+    width: 100%;
+    background-color: #543a2d;
+    color: white;
+    text-align: center;
+    padding: .7em;
+    text-transform: uppercase;
+}
+
+#subheader i {
+    font-size: 2em;
+    vertical-align: middle;
+    margin-bottom: 0.1em;
+    margin-left: 0.2em;
+}
+
+main {
+    font-size: 2em;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+main h1 {
+    font-size: 2em;
+    margin: 0;
+}
+
+.page-right {
+    position: fixed;
+    top: 50%;
+    left: 100%;
+    transform: translate(-50%, -50%);
+    border-radius: 3.5vh;
+    background-color: rgba(255,255,255,0.8);
+    height: 7vh;
+    width: 7vh;
+    font-size: 5vh;
+    color: #543a2d;
+    text-align: center;
+}
 
 a { 
     color: #3F2F27;
@@ -35,9 +84,20 @@ a {
 }
 
 nav {
-    background-color: white;
-    width: 100%;
-    height: 8vh;
+    display: flex;
+    align-items: flex-end;
+}
+
+#options {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    margin-left: 3vw;
+    text-align: right;
+}
+
+#options > span {
+    white-space: nowrap;
 }
 
 #logo {

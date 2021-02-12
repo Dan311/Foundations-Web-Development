@@ -12,7 +12,20 @@ body {
     left: 0;
     height: 100%;
     width: 100vh;
+    font-size: 2.5vh;
 }
+
+/* .image2 {
+    margin: 0;
+    background: url(../images/kitten-flying.jpg) no-repeat center center fixed;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100vh;
+    font-size: 2.5vh;
+} */
 
 #header {
     position: fixed;
@@ -34,11 +47,19 @@ body {
     font-size: 1.3em;
 }
 
-.netflix > img {
+.netflix img {
     position: fixed;
-    top: 20%;
+    top: calc(20% + .6em);
     vertical-align: middle;
-    height: 3em;
+    height: 1.5em;
+    transition: 1s;
+    padding-left: .3em;
+}
+
+.netflix img:hover {
+    transform: rotateY(360deg);
+    border: 1px solid red;
+    height: 1.2em;
 }
 
 nav {
@@ -52,11 +73,13 @@ nav {
 }
 
 a {
+    display: inline-block;
     font-size: 1.25em;
     margin: .25em;
     color: orange;
     text-decoration: none;
     padding-bottom: .25em;
+    transition: transform .5s ease-out;
 }
 
 a > .paw {
@@ -64,10 +87,12 @@ a > .paw {
 }
 
 a:hover {
-    display: inline;
-    padding-bottom: 1.25em;
+    transform: translate(0, -1em);
 }
 
 .paw:hover {
-    display:block;
+    display:inline-block;
+    border: 1px red solid;
+    height: 1em;
+    width: 1em;
 }
