@@ -27,7 +27,7 @@ body {
     grid-template-rows: auto 1fr auto;
     width: 100%;
     /* height: 100vh; */
-    border: 1px solid red;
+    border: 1px solid black;
 }
 
 header {
@@ -38,7 +38,7 @@ header {
     color: #F5EB4B;
     text-shadow: 2px 2px darkblue;
     background-color: #2279EC;
-    border: 1px solid red;
+    border: 1px solid black;
     padding-bottom: 1.5em;
 }
 
@@ -64,10 +64,25 @@ nav {
     grid-area: nav;
     display: flex;
     justify-content: space-evenly;
-    border: 1px solid red;
+    border: 1px solid black;
     flex-direction: column;
     text-align: center;
     background-color: lightgray;
+}
+
+/* nav:hover {
+    background: linear-gradient(90deg, blue, lightblue, turquoise);
+} */
+
+nav:hover, aside:hover {
+        transition: 0.5s;
+        background: linear-gradient(90deg, var(--c1, #f6d365), var(--c2, #fda085) 51%, var(--c1, #f6d365)) var(--x, 0)/ 200%;
+        --c1: #f6d365;
+        --c2: #fda085;
+}
+
+nav > p {
+    font-size: 2em;
 }
 
 a {
@@ -82,7 +97,7 @@ a:hover {
     text-decoration: none;
     color: black;
     text-shadow: 2px 2px white;
-    font-size: 0.9em;
+    font-size: 0.85em;
     background-color: none;
     /* transform: rotateX(360deg); */
     text-transform: uppercase;
@@ -92,16 +107,16 @@ a:hover {
 main {
     display: flex;
     grid-area: content;
-    border: 1px solid red;
+    border: 1px solid black;
     color: red;
     text-align: center;
-    justify-content:center;align-items:center;
+    justify-content:center; 
+    align-items:center;
     flex-direction: column;
-
 }
 
 main > p {
-    color: red;
+    color: #F5EB4B;
     text-shadow: 2px 2px black;
 }
 
@@ -114,7 +129,7 @@ main > p {
     width: 95%;
     height: 100%;
     padding: 0;
-    margin: 1px solid red;
+    margin: 1px solid black;
 }
 
 .thing {
@@ -123,13 +138,17 @@ main > p {
     width: 175px;
     height: 175px;
     border: 1px solid black;
+    border-radius: 5%;
     padding-left: 1em;
     padding-right: 1em;
     margin: 0.5em;
 }
 
 .thing > p {
-    font-size: .6em;
+    font-size: .7em;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 
 .thing:hover {
@@ -144,7 +163,7 @@ img {
 
 aside {
     grid-area: side;
-    border: 1px solid red;
+    border: 1px solid black;
     background-color: none;
     color: white;
     text-shadow: 2px 2px black;
@@ -152,21 +171,28 @@ aside {
 
 }
 
+tr, td, th {
+    text-align: center;
+}
+
 h2, h4 {
     text-align: center;
-    color: burlywood;
+    color: black;
     margin: 0;
     padding: 0;
 }
 
+h2 {
+    text-shadow: none;
+}
+
 aside > h4 {
-    color: forestgreen;
     text-shadow: none;
 }
 
 footer {
     grid-area: footer;
-    border: 1px solid red;
+    border: 1px solid black;
     background-color: burlywood;
 }
 
@@ -207,4 +233,9 @@ footer {
     background-color: white;
     padding: 10px;
     margin-top: 10px;
+}
+
+.card p::first-line {
+    font-weight: bold;
+    font-size: 1.25em;
 }
