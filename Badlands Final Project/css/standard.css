@@ -17,6 +17,21 @@ body {
     background-position-y: 0%;
 }
 
+.body {
+    background-image: none;
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    /* top: 0;
+    right: 0; */
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position-y: 0%;   
+}
+
 .container {
     display: grid;
     grid-template-areas: 
@@ -42,10 +57,25 @@ header {
     padding-bottom: 1.5em;
 }
 
+.banner {
+    position: fixed;
+    /* display: flex; */
+    justify-content: flex-start;
+    text-align: center;
+    width: 100%;
+    height: 20vh;
+    color: #F5EB4B;
+    text-shadow: 2px 2px darkblue;
+    background-color: #2279EC;
+    border: 1px solid black;
+    padding-bottom: 1.5em;
+}
+
 p {
     font-size: 2.8em;
     margin: 0.4em;
     font-weight: 700;
+    text-align: center;
 }
 
 span {
@@ -70,18 +100,38 @@ nav {
     background-color: lightgray;
 }
 
+.rownav {
+    position: fixed;
+    top: 20vh;
+    left: 0;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 8vh;
+    border: 1px solid black;
+    flex-direction: row;
+    font-size: 0.8em;
+    text-align: center;
+    background-color: lightgray; 
+}
+
+.rownav > a {
+    padding: 1em 1em 1em 1em;
+    border: 1px solid red;
+}
+
 /* nav:hover {
     background: linear-gradient(90deg, blue, lightblue, turquoise);
 } */
 
-nav:hover, aside:hover {
+.menu:hover, aside:hover {
         transition: 0.5s;
         background: linear-gradient(90deg, var(--c1, #f6d365), var(--c2, #fda085) 51%, var(--c1, #f6d365)) var(--x, 0)/ 200%;
         --c1: #f6d365;
         --c2: #fda085;
 }
 
-nav > p {
+.menu > p {
     font-size: 2em;
 }
 
@@ -93,7 +143,7 @@ a {
     background-color: none;
 }
 
-a:hover {
+.menu > a:hover {
     text-decoration: none;
     color: black;
     text-shadow: 2px 2px white;
@@ -104,7 +154,7 @@ a:hover {
     text-orientation: sideways;
 }
 
-main {
+.main {
     display: flex;
     grid-area: content;
     border: 1px solid black;
@@ -115,7 +165,7 @@ main {
     flex-direction: column;
 }
 
-main > p {
+.main > p {
     color: #F5EB4B;
     text-shadow: 2px 2px black;
 }
@@ -135,13 +185,17 @@ main > p {
 .thing {
     align-content: flex-start;
     background-color: rgba(211,211,211, 0.5);
-    width: 175px;
-    height: 175px;
+    /* width: 175px;
+    height: 175px; */
     border: 1px solid black;
     border-radius: 5%;
-    padding-left: 1em;
+    padding-top: 25px;
+    height: 150px;
+    width: 175px;
+    align-content: center;
+    /* padding-left: 1em;
     padding-right: 1em;
-    margin: 0.5em;
+    margin: 0.5em; */
 }
 
 .thing > p {
@@ -156,9 +210,16 @@ main > p {
     text-shadow: 0.5px 0.5px black;
 }
 
-img {
+/* img {
     width: 125px;
     height: 125px;
+} */
+
+img {
+    margin-left: auto;
+    margin-right: auto;
+    width: 125px;
+    height: 125px; 
 }
 
 aside {
@@ -175,7 +236,11 @@ tr, td, th {
     text-align: center;
 }
 
-h2, h4 {
+td {
+    font-size: 0.8em;
+}
+
+h2, h4, h5 {
     text-align: center;
     color: black;
     margin: 0;
@@ -196,46 +261,71 @@ footer {
     background-color: burlywood;
 }
 
-.header2 {
-    padding: 15px;
-    font-size: 1em;
-    text-align: center;
-    background: white;
-}
-
-.leftcolumn > p, .rightcolumn > p {
-    font-size: 1em;
-    font-family: Arial;
-    font-weight: 300;
-    color: black;
-    text-shadow: 1px 1px white;
-
-}
-
-.leftcolumn {
-    float: left;
-    width: 75%;
-}
-
-.rightcolumn {
-    float: left;
-    width: 25%;
-    padding-left: 10px;
-}
-
-.blogimg {
-    background-color: #aaa;
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
     width: 100%;
-    padding: 20px;
+    height: 8vh;
 }
 
-.card {
-    background-color: white;
-    padding: 10px;
-    margin-top: 10px;
+.blog {
+    position:fixed;
+    top: 30vh;
+    left: 1vh;
+    height: auto;
+    width: 100%;
 }
 
-.card p::first-line {
-    font-weight: bold;
-    font-size: 1.25em;
+.diner p {
+    font-size: 0.5em;
+    font: 300 16px/22px "Lato","Open Sans","Helvetica Neue", Helvetica, Arial, sans-serif;
+
+}
+
+.speaker-info {
+    border: 1px solid #dfe2e5;
+    border-radius: 5px;
+    margin-top: 88px;
+    padding-bottom: 22px;
+    text-align: center; 
+}
+
+.speaker-info img {
+    border-radius: 50%;
+    margin: -66px 0 22px 0;
+    height: 130px;
+    vertical-align: top; 
+}
+
+.diner {
+    margin-bottom: 44px;
+}
+
+.col-1-3 {
+    width: 33.3%;
+}
+
+.col-2-3 {
+    width: 66.66%;
+}
+
+.col-1-3 {
+    width: 33.3%;
+}
+
+.col-2-3 {
+    width: 66.66%;
+}
+
+.col-1-3,
+.col-2-3 {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.col-1-3,
+.col-2-3 {
+    padding-left: 15px;
+    padding-right: 15px;
 }
