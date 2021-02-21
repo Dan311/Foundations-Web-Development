@@ -343,6 +343,30 @@ aside,
     padding-right: 10px;
 }
 
+li {
+    list-style-type: none;
+}
+
+.index {
+    text-shadow: 1.5px 1.5px white;
+}
+
+.gear {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.gear p {
+    text-decoration: underline;
+    color: darkblue;
+}
+
+.gear table {
+    font-size: 1.5em;
+    background-color: rgba(211,211,211, 0.8)
+}
+
 .slideshow-images {
     position: absolute;
     left: 0;
