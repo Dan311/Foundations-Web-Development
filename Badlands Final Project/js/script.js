@@ -6,6 +6,13 @@ $(function() {
     });
 });
 
+$(function() {
+    $("table").hover(function() {
+        $(this).attr("style", "color:red")
+    },function() {
+        $(this).attr("style", "color:black")
+    });
+});
 
 
 
